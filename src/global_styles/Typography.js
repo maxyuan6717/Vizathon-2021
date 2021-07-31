@@ -7,8 +7,6 @@ export const CenteredText = styled.div`
 `;
 
 export const Source = styled.div`
-  text-align: center;
-  font-weight: 300;
   font-size: 8px;
   line-height: 9.4px;
 `;

@@ -41,3 +41,7 @@ export const SecondaryText = styled.div`
   opacity: 0;
   transition: opacity 0.3s 0.3s ease-in-out;
 `;
+
+export const SecondarySrc = styled.div`
+  margin-top: 10px;
+`;

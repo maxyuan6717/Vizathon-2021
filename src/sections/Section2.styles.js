@@ -1,0 +1,20 @@
+import styled from "styled-components";
+import { Tint } from "../global_styles/Structure";
+
+export const TroublingContainer = styled.div`
+  width: 100%;
+  position: relative;
+  padding-bottom: 270px;
+`;
+
+export const TroublingText = styled.div`
+  width: 540px;
+`;
+
+export const DiscriminationImage = styled.div`
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  ${Tint("graph")}
+`;

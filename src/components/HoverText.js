@@ -9,12 +9,14 @@ const HoverText = ({ primary, secondary }) => {
       {primary}
       <Styles.SecondaryText width={secondary.width}>
         {secondary.text}
-        <Source>
-          Source:{" "}
-          <a href={secondary.href} target="_blank" rel="noopener noreferrer">
-            {secondary.src}
-          </a>
-        </Source>
+        <Styles.SecondarySrc>
+          <Source>
+            Source:{" "}
+            <a href={secondary.href} target="_blank" rel="noopener noreferrer">
+              {secondary.src}
+            </a>
+          </Source>
+        </Styles.SecondarySrc>
       </Styles.SecondaryText>
     </Styles.Container>
   );
