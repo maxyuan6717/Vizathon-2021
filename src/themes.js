@@ -4,6 +4,6 @@ export const theme = {
     orange: "#FFA800",
   },
   landing: {
-    padding: [50, 100],
+    padding: [150, 100, 50, 100],
   },
 };

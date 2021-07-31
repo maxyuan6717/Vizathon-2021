@@ -2,7 +2,7 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./themes";
 
-import * as Styles from "./App.styles.js";
+import * as Styles from "./App.styles";
 
 import Landing from "./sections/Landing";
 
