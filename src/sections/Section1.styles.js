@@ -22,7 +22,6 @@ export const Landing = styled.div`
 
 export const SocialMediaText = styled.div`
   position: absolute;
-  color: rgba(255, 255, 255, 0.5);
   font-size: 40px;
   top: -32px;
   left: 20px;
