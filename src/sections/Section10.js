@@ -58,6 +58,7 @@ const Section10 = () => {
       >
         <BsChevronUp size={30} style={{ display: "block" }} />
       </Styles.UpBtn>
+      <Styles.Footer>Built by Max & Julia • vizathon 2021</Styles.Footer>
     </Background>
   );
 };

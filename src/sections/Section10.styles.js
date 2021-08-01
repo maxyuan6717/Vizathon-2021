@@ -58,3 +58,13 @@ export const UpBtn = styled.div`
     transform: translateY(-20%);
   }
 `;
+
+export const Footer = styled.div`
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+`;
