@@ -34,7 +34,7 @@ export const SecondaryText = styled.div`
   position: absolute;
   width: ${({ width }) => width}px;
   right: calc(-${({ length }) => length || UNDERLINE_LENGTH}px);
-  bottom: -10px;
+  bottom: -5px;
   font-weight: 400;
   line-height: 12px;
   transform: translateY(100%);

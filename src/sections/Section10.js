@@ -52,7 +52,7 @@ const Section10 = () => {
       <Styles.UpBtn
         onClick={() =>
           scroll.scrollToTop({
-            duration: 3000,
+            duration: 4000,
           })
         }
       >

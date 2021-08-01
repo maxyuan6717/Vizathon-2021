@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import { Tint } from "../global_styles/Structure";
+// import { Tint } from "../global_styles/Structure";
 
 export const Landing = styled.div`
   position: relative;
   display: inline-block;
   margin: 0 auto;
-
-  ${Tint("pink", 0.5)}
 `;
 
 export const SocialMediaText = styled.div`
@@ -33,7 +31,7 @@ export const SmallText = styled.div`
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
-  width: 513px;
+  width: 480px;
   right: -85px;
   bottom: 50px;
 `;

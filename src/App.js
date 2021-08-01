@@ -34,9 +34,15 @@ function App() {
                 <Section3 />
               </Styles.AbsPanel>
               <Tween from={{ x: "-100%" }} to={{ x: "0%" }}>
+                <Styles.AbsPanel style={{ zIndex: -1 }} />
+              </Tween>
+              <Tween from={{ x: "-100%" }} to={{ x: "0%" }}>
                 <Styles.AbsPanel>
                   <Section4 />
                 </Styles.AbsPanel>
+              </Tween>
+              <Tween from={{ x: "100%" }} to={{ x: "0%" }}>
+                <Styles.AbsPanel style={{ zIndex: -1 }} />
               </Tween>
               <Tween from={{ x: "100%" }} to={{ x: "0%" }}>
                 <Styles.AbsPanel>
@@ -63,7 +69,7 @@ function App() {
               </Tween>
             </Timeline>
           </Scene>
-          <Scene offset={400} pin>
+          <Scene offset={200} pin>
             <Styles.Panel first>
               <Section9 />
             </Styles.Panel>

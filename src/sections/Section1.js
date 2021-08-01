@@ -1,7 +1,8 @@
 import React from "react";
 import { Background, Content } from "../global_styles/Structure";
 
-import src from "../assets/landing_image.png";
+// import src from "../assets/landing_image.png";
+import src from "../assets/landing.gif";
 
 import * as Styles from "./Section1.styles";
 

@@ -8,10 +8,7 @@ export const DataContainer = styled.div`
 
 export const Graph = styled.div`
   width: 600px;
-  height: 420px;
-  border-radius: 12px;
-  background-color: white;
-  overflow: hidden;
+  height: 300px;
 `;
 
 export const Description = styled.div`
