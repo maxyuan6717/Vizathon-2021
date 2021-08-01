@@ -1,8 +1,8 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./themes";
-import { Controller, Scene } from "react-scrollmagic";
-import { Tween, Timeline } from "react-gsap";
+// import { Controller, Scene } from "react-scrollmagic";
+// import { Tween, Timeline } from "react-gsap";
 
 import * as Styles from "./App.styles";
 

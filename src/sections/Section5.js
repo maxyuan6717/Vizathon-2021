@@ -10,19 +10,11 @@ const Section5 = () => {
   return (
     <Background color="pink">
       <Content section={5}>
-        <CenteredText width={805} weight={300}>
-          Given our understanding of the harms of tech, none of this is
-          surprising.
-          <Spacer height={20} />
-          And this trend is not isolated to anti-Asian hate. On the Internet at
-          large, hate has become more pervasive over time.
-        </CenteredText>
-        <Spacer height={25} />
         <CenteredText width={805} weight={700}>
           Why? On social media, ideas are often spread, not on the basis of
           merit, but on the basis of emotional stimulation.
         </CenteredText>
-        <Spacer height={150} />
+        <Spacer height={100} />
         <Styles.DataContainer>
           <Styles.Percentage>17%</Styles.Percentage>
           <Styles.Details>

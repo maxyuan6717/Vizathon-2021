@@ -1,6 +1,8 @@
 import { ResponsiveLine } from "@nivo/line";
 import React, { useState, useMemo } from "react";
-import { Background, Content, Btn } from "../global_styles/Structure";
+import { Spacer, Background, Content, Btn } from "../global_styles/Structure";
+
+import { LeftText, CenteredText, Source } from "../global_styles/Typography";
 
 import { data } from "../jsons/Tweets_Time";
 // import { data } from "../jsons/Tweets_Jan_Aug";
@@ -59,6 +61,47 @@ const Section3 = () => {
   return (
     <Background color="pink">
       <Content section={3}>
+        <CenteredText width={805} weight={300} size={24}>
+          In this case, the agent of transmission is not droplet spread. It's
+          existing forces of systemic oppression combined with feelings of fear,
+          uncertainty, and vulnerability,{" "}
+          <b>amplified & made more contagious by the Internet.</b>
+        </CenteredText>
+        <Spacer height={50} />
+        <LeftText width={650} weight={400} size={14} lineHeight={16.4}>
+          In a May 2020 research paper, researchers from the Georgia Institute
+          of Technology compiled 30 million tweets from Twitter, classifying
+          each as hate, counterhate, neutral (neither hate nor counter-hate), or
+          other (containing elements of both hate and counterhate). Below, we
+          generate two data visualizations based on a random sample of 1 million
+          of these tweets.
+          <Spacer height={15} />
+          <b>
+            Looking just at the first two classifications—hate and
+            counterhate—we see that hate tweets are, on average, four times more
+            frequent than counter-hate tweets.
+          </b>
+          <Spacer height={15} />
+          And from March 16th to March 18th, 2020, the number of hate tweets
+          rose by 500% (in response, counter-hate rose at a similar rate) when
+          then-President Donald Trump first used the phrase, “China Virus,”
+          sparking a storm of anti-Asian Twitter content.
+          <Spacer height={15} />
+          Click the buttons to toggle between hate and counterhate and by day
+          vs. cumulative figures.
+          <Spacer height={15} />
+          <Source>
+            Source:{" "}
+            <a
+              href="http://claws.cc.gatech.edu/covid/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Georgia Institute of Technology
+            </a>
+          </Source>
+        </LeftText>
+        <Spacer height={100} />
         <Styles.GraphContainer>
           <ResponsiveLine
             colors={(d) => d.color}
@@ -169,7 +212,19 @@ const Section3 = () => {
               Counterhate
             </Btn>
           </Styles.BtnContainer>
-          <Styles.Title>Title</Styles.Title>
+          <Styles.Title>
+            {`${cumulative ? "Cumulative " : ""}Number of ${
+              included.hate && included.counterhate
+                ? "Hate vs. Counterhate"
+                : included.counterhate
+                ? "Counterhate"
+                : included.hate
+                ? "Hate"
+                : ""
+            } Tweets ${!cumulative ? "By Day" : ""},`}
+            <br />
+            January to April 2020
+          </Styles.Title>
         </Styles.GraphContainer>
       </Content>
     </Background>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const GraphContainer = styled.div`
   height: 600px;
-  width: 900px;
+  width: 1000px;
   position: relative;
 `;
 
@@ -16,9 +16,11 @@ export const LegendBall = styled.div`
 
 export const Title = styled.div`
   position: absolute;
+  text-align: center;
   font-size: 20px;
+  line-height: 24px;
   font-weight: 700;
-  top: -25px;
+  top: -35px;
   left: 50%;
   transform: translateX(-50%);
 `;

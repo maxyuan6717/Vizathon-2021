@@ -2,7 +2,10 @@ import React, { useCallback, useState, useMemo } from "react";
 import chroma from "chroma-js";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
-import { Background, Content, Btn } from "../global_styles/Structure";
+import { Background, Content, Btn, Spacer } from "../global_styles/Structure";
+import { LeftText, Source } from "../global_styles/Typography";
+
+import src from "../assets/discrimination.png";
 
 import { getStateAbbr, getPopulation } from "../utils";
 
@@ -104,20 +107,29 @@ const Section4 = () => {
   return (
     <Background color="pink">
       <Content section={4}>
+        <LeftText width={650} weight={400} size={14} lineHeight={16.4}>
+          Interact with the map below to explore the amount of hate vs.
+          counterhate by state in the U.S. over the course of four months, from
+          January to April 2020.
+          <Spacer height={15} />
+          Click the buttons to toggle between hate and counterhate, by day vs.
+          cumulative, and normalized vs. absolute figures. Use the slider to see
+          how figures change through time.
+          <Spacer height={15} />
+          <Source>Source: Georgia Institute of Technology</Source>
+        </LeftText>
+        <Spacer height={50} />
         <Styles.MapContainer>
-          <Styles.Title>Title</Styles.Title>
-          <Styles.OptionBar>
-            <Btn selected onClick={() => setHate(!hate)}>
-              {hate ? "Hate" : "Counterhate"}
-            </Btn>
-            <Btn selected onClick={() => setNormalize(!normalize)}>
-              {normalize ? "Normalized by Population" : "Raw Volume"}
-            </Btn>
-            <Btn selected onClick={() => setCumulative(!cumulative)}>
-              {cumulative ? "Cumulative" : "By Day"}
-            </Btn>
-          </Styles.OptionBar>
-          <USAMap width={600} height={400} customize={stateConfig} />
+          <Styles.Title>
+            {`Heatmap of ${cumulative ? "Cumulative " : ""}Number of ${
+              hate ? "Hate" : "Counter-Hate"
+            } Tweets ${!cumulative ? "By Day " : ""}`}
+            <br />
+            {`in the U.S., ${
+              normalize ? "Normalized by Population" : "Raw Volume"
+            }`}
+          </Styles.Title>
+          <Styles.Date>{dayjs(getDay()).format("MMM DD, YYYY")}</Styles.Date>
           <Styles.SliderContainer>
             <Slider
               min={15}
@@ -133,8 +145,43 @@ const Section4 = () => {
               }}
             />
           </Styles.SliderContainer>
-          <Styles.Date>{dayjs(getDay()).format("MMM DD, YYYY")}</Styles.Date>
+          <USAMap width={650} height={400} customize={stateConfig} />
+          <Styles.OptionBar>
+            <Btn selected onClick={() => setHate(!hate)}>
+              {hate ? "Hate" : "Counterhate"}
+            </Btn>
+            <Btn selected onClick={() => setCumulative(!cumulative)}>
+              {cumulative ? "Cumulative" : "By Day"}
+            </Btn>
+            <Btn selected onClick={() => setNormalize(!normalize)}>
+              {normalize ? "Normalized by Population" : "Raw Volume"}
+            </Btn>
+          </Styles.OptionBar>
         </Styles.MapContainer>
+        <Spacer height={50} />
+        <LeftText weight={400} size={14} lineHeight={16.4} width={650}>
+          The pervasiveness of hate is especially troubling because hate online
+          sets the stage for real-world violence. From March 2020 to 2021, the
+          number of incidents of online discrimination reported to Stop AAPI
+          Hate increased by 82%. Incidents of physical assault increased by 64%.
+          <Spacer height={15} />
+          <Source>Source: Stop AAPI Hate National Report</Source>
+        </LeftText>
+        <Spacer height={50} />
+        <img
+          src={src}
+          width={650}
+          alt="Discrimination"
+          style={{ borderRadius: "12px" }}
+        />
+        <Spacer height={50} />
+        <LeftText weight={400} size={14} lineHeight={16.4} width={650}>
+          Given our understanding of the harms of tech, none of this is
+          surprising.
+          <Spacer height={15} />
+          And this trend is by no means isolated to anti-Asian hate. On the
+          Internet at large, hate has become more pervasive over time.
+        </LeftText>
       </Content>
     </Background>
   );
