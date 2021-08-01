@@ -9,7 +9,7 @@ import * as Styles from "./Section6.styles";
 const Section6 = () => {
   return (
     <>
-      <Background color="black" style={{ position: "relative" }}>
+      <Background gradient style={{ position: "relative" }}>
         <Content section={6}>
           <CenteredText width={800} weight={300}>
             This environment of hate came to a boiling point on March 16th,

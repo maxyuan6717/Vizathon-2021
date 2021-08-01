@@ -11,13 +11,18 @@ const Section1 = () => {
     <Background color="pink">
       <Content section={1}>
         <Styles.Landing>
+          <img
+            src={src}
+            width={840}
+            alt="Social Media"
+            style={{ opacity: 0.75 }}
+          />
           <Styles.SocialMediaText>SOCIAL MEDIA:</Styles.SocialMediaText>
           <Styles.AgentText>AGENT OF TRANSMISSION</Styles.AgentText>
           <Styles.SmallText>
             A study in the role of social media in society, reflected through
             the rise of anti-Asian hate and #StopAsianHate.
           </Styles.SmallText>
-          <img src={src} alt="Social Media" />
         </Styles.Landing>
       </Content>
     </Background>

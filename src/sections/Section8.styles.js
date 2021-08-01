@@ -8,6 +8,7 @@ export const Container = styled.div`
   min-width: ${WIDTH}px;
   min-height: 100vh;
   background-image: url(${({ src }) => src});
+  background-position: center;
   background-size: cover;
 
   ${Tint("black", 0.5)}

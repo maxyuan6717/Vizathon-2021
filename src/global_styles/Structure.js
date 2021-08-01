@@ -7,7 +7,11 @@ export const Centered = `display: flex;justify-content: center;align-items: cent
 
 export const Background = styled.div`
   display: flex;
-  background-color: ${({ theme, color }) => theme.colors[color]};
+  ${({ theme, color, gradient }) =>
+    gradient
+      ? `background: linear-gradient(to bottom, ${theme.colors.pink}, black 70%, black 100%);`
+      : `background: ${theme.colors[color]};`}
+
   min-width: ${WIDTH}px;
   min-height: 100vh;
 `;
@@ -46,6 +50,7 @@ export const Tint = (color, opacity = 0.33) => `
 
 export const Btn = styled.div`
   font-size: 16px;
+  line-height: 24px;
   padding: 4px 8px;
   background-color: ${({ selected }) => (selected ? "#c94284" : "")};
   border-radius: 6px;

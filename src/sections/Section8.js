@@ -10,12 +10,12 @@ const Section8 = () => {
   return (
     <Styles.Container src={src}>
       <Content section={8} style={{ zIndex: 69 }}>
-        <CenteredText width={781} weight={700}>
+        <CenteredText width={850} weight={700}>
           Soon after, social media became an agent of transmission for something
           else: the #StopAsianHate movement.
         </CenteredText>
         <Spacer height={50} />
-        <CenteredText width={781} weight={400}>
+        <CenteredText width={850} weight={400}>
           People took to their keyboards and screens to organize movements and
           educational resources, to share personal testimony of the AAPI
           experience and the GoFundMe pages of AAPI empowerment organizations

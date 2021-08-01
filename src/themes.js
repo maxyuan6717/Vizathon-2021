@@ -6,7 +6,7 @@ export const theme = {
     black: "#000",
   },
   section1: {
-    padding: [100, 100, 100, 100],
+    padding: [75, 100, 75, 100],
   },
   section2: {
     padding: [100, 150, 100, 150],
@@ -21,13 +21,13 @@ export const theme = {
     padding: [50, 0, 50, 0],
   },
   section6: {
-    padding: [250, 0, 250, 0],
+    padding: [700, 0, 250, 0],
   },
   section7: {
-    padding: [200, 0, 200, 0],
+    padding: [500, 0, 500, 0],
   },
   section8: {
-    padding: [200, 0, 200, 0],
+    padding: [300, 0, 300, 0],
   },
   section9: {
     padding: [150, 0, 150, 0],
