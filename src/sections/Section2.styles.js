@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Tint } from "../global_styles/Structure";
 
 export const TroublingContainer = styled.div`
   width: 100%;
@@ -16,5 +15,7 @@ export const DiscriminationImage = styled.div`
   right: 0;
   bottom: 0;
 
-  ${Tint("graph")}
+  height: 296px;
+  border-radius: 12px;
+  overflow: hidden;
 `;
