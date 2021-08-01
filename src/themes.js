@@ -24,7 +24,7 @@ export const theme = {
     padding: [500, 0, 250, 0],
   },
   section7: {
-    padding: [500, 0, 500, 0],
+    padding: [500, 0, 300, 0],
   },
   section8: {
     padding: [300, 0, 300, 0],
