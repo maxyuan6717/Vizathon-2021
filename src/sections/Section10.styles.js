@@ -6,7 +6,7 @@ export const DualityContainer = styled.div`
 `;
 
 export const DualityText = styled.div`
-  width: 590px;
+  width: 500px;
   position: relative;
   z-index: 69;
 `;
@@ -20,7 +20,7 @@ export const SmallText = styled.div`
 export const ImageContainer = styled.div`
   position: absolute;
   right: -50px;
-  top: 0;
+  top: 80px;
 
   &:before {
     content: "";

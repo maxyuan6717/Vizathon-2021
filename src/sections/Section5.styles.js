@@ -17,4 +17,6 @@ export const Details = styled.div`
   font-weight: 700;
   width: 512px;
   margin-left: 45px;
+  font-size: 24px;
+  line-height: 28px;
 `;

@@ -20,7 +20,6 @@ const Section6 = () => {
           <Styles.Candle src={src} alt="Candle" height={150} />
         </Content>
       </Background>
-      <Styles.Border />
     </>
   );
 };
