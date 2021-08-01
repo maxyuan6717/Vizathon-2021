@@ -210,11 +210,12 @@ const Section9 = () => {
         <Styles.DataContainer>
           <Styles.Graph>
             <ResponsiveBar
+              colors={"white"}
               data={barChartData}
               keys={["percentGoal"]}
               indexBy="section"
-              valueFormat=".2f"
-              margin={{ top: 0, right: 90, bottom: 75, left: 90 }}
+              valueFormat=".1f"
+              margin={{ top: 20, right: 90, bottom: 75, left: 90 }}
               axisBottom={{
                 tickSize: 5,
                 tickPadding: 5,
@@ -223,11 +224,13 @@ const Section9 = () => {
                 legendPosition: "middle",
                 legendOffset: 40,
               }}
+              labelTextColor="#AC1960"
               axisLeft={{
                 orient: "left",
                 legend: "Percentile",
-                legendOffset: -40,
+                legendOffset: -50,
                 legendPosition: "middle",
+                format: (d) => d + "%",
               }}
               isInteractive={false}
               theme={{

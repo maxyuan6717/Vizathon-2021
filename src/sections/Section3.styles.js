@@ -25,6 +25,6 @@ export const Title = styled.div`
 
 export const BtnContainer = styled.div`
   position: absolute;
-  top: ${({ pos }) => 10 + pos * 45}px;
+  top: ${({ pos }) => 30 + pos * 45}px;
   left: 100px;
 `;

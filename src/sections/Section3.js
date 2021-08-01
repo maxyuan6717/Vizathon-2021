@@ -65,7 +65,7 @@ const Section3 = () => {
             data={[]
               .concat(included.counterhate ? graph_data[0] : [])
               .concat(included.hate ? graph_data[1] : [])}
-            margin={{ top: 0, right: 90, bottom: 75, left: 90 }}
+            margin={{ top: 20, right: 90, bottom: 75, left: 90 }}
             axisBottom={{
               orient: "bottom",
               tickValues: XAxisTicks,
