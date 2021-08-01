@@ -17,11 +17,12 @@ const XAxisTicks = [
   "Mar 15",
   "Apr 1",
   "Apr 15",
-  // "May 1",
-  // "Jun 1",
-  // "Jul 1",
-  // "Aug 1",
 ];
+
+const colors = {
+  Counterhate: "#99ccff",
+  Hate: "#ff9999",
+};
 
 const Section3 = () => {
   const [cumulative, setCumulative] = useState(false);
@@ -49,6 +50,7 @@ const Section3 = () => {
       ret.push({
         id: label,
         data: label_data,
+        color: colors[label],
       });
     });
     return ret;
@@ -59,45 +61,43 @@ const Section3 = () => {
       <Content section={3}>
         <Styles.GraphContainer>
           <ResponsiveLine
+            colors={(d) => d.color}
             data={[]
               .concat(included.counterhate ? graph_data[0] : [])
               .concat(included.hate ? graph_data[1] : [])}
-            margin={{ top: 75, right: 75, bottom: 75, left: 75 }}
+            margin={{ top: 0, right: 90, bottom: 75, left: 90 }}
             axisBottom={{
               orient: "bottom",
-              tickSize: 5,
-              tickPadding: 5,
-              tickRotation: 0,
               tickValues: XAxisTicks,
               legend: "Day",
-              legendOffset: 36,
+              legendOffset: 60,
               legendPosition: "middle",
             }}
             gridXValues={XAxisTicks}
             axisLeft={{
               orient: "left",
-              tickSize: 5,
-              tickPadding: 5,
-              tickRotation: 0,
               legend: "Tweets",
-              legendOffset: -40,
+              legendOffset: -80,
               legendPosition: "middle",
             }}
+            enablePoints={false}
+            lineWidth={4}
             enableSlices="x"
             sliceTooltip={({ slice }) => {
-              console.log(slice);
               return (
                 <div
                   style={{
-                    background: "white",
+                    background: "rgba(255,255,255,0.2)",
+                    borderRadius: "8px",
                     padding: "9px 12px",
-                    border: "1px solid #ccc",
+                    border: "1px solid rgba(255,255,255,0.4)",
                     zIndex: "420 !important",
                     fontSize: "16px",
                   }}
                 >
-                  <div style={{ color: "black" }}>
-                    {slice.points[1].data.xFormatted}, 2020
+                  <div style={{ color: "white" }}>
+                    {(slice.points[0] || slice.points[1])?.data?.xFormatted},
+                    2020
                   </div>
                   {slice.points.map((point) => (
                     <div
@@ -106,44 +106,70 @@ const Section3 = () => {
                         color: point.serieColor,
                       }}
                     >
-                      <strong>{point.serieId}:</strong>
-                      {"  " + point.data.yFormatted}
+                      <strong>{`${point.serieId}: ${point?.data?.yFormatted}`}</strong>
                     </div>
                   ))}
                 </div>
               );
             }}
             useMesh={true}
-            legends={[
-              {
-                anchor: "top-right",
-                direction: "column",
-                justify: false,
-                translateX: 0,
-                translateY: 8,
-                itemsSpacing: 0,
-                itemDirection: "left-to-right",
-                itemWidth: 100,
-                itemHeight: 20,
-                itemOpacity: 0.75,
-                symbolSize: 12,
-                symbolShape: "circle",
-                symbolBorderColor: "rgba(0, 0, 0, .5)",
-                effects: [
-                  {
-                    on: "hover",
-                    style: {
-                      itemBackground: "rgba(0, 0, 0, .03)",
-                      itemOpacity: 1,
-                    },
-                  },
-                ],
-              },
-            ]}
             theme={{
-              background: "#ffffff",
+              textColor: "#ffffff",
+              fontSize: 16,
+              axis: {
+                legend: {
+                  text: {
+                    fontSize: 20,
+                    fontWeight: "bold",
+                  },
+                },
+                ticks: {
+                  line: {
+                    strokeWidth: 2,
+                    stroke: "rgba(255,255,255,0.1)",
+                  },
+                },
+              },
+              grid: {
+                line: {
+                  strokeWidth: 2,
+                  stroke: "rgba(255,255,255,0.1)",
+                },
+              },
+              crosshair: {
+                line: {
+                  stroke: "#ffffff",
+                  strokeOpacity: 0.5,
+                },
+              },
             }}
           />
+          <Styles.CumulativeToggle
+            pos={0}
+            selected
+            onClick={() => setCumulative(!cumulative)}
+          >
+            {cumulative ? "Cumulative" : "By Day"}
+          </Styles.CumulativeToggle>
+          <Styles.CumulativeToggle
+            pos={1}
+            selected={included.hate}
+            onClick={() => setIncluded({ ...included, hate: !included.hate })}
+          >
+            <Styles.LegendBall color={colors["Hate"]} />
+            Hate
+          </Styles.CumulativeToggle>
+          <Styles.CumulativeToggle
+            pos={2}
+            selected={included.counterhate}
+            onClick={() =>
+              setIncluded({ ...included, counterhate: !included.counterhate })
+            }
+          >
+            <Styles.LegendBall color={colors["Counterhate"]} />
+            Counterhate
+          </Styles.CumulativeToggle>
+          <Styles.Title>Title</Styles.Title>
         </Styles.GraphContainer>
       </Content>
     </Background>

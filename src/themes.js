@@ -12,7 +12,7 @@ export const theme = {
     padding: [100, 150, 100, 150],
   },
   section3: {
-    padding: [150, 0, 150, 0],
+    padding: [50, 0, 50, 0],
   },
   section4: {
     padding: [150, 0, 150, 0],
