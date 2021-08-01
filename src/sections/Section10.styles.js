@@ -30,7 +30,7 @@ export const ImageContainer = styled.div`
     left: 15px;
     right: 15px;
     background-color: #ffa800;
-    opacity: 0.5;
+    opacity: 0.33;
     transform: rotate(2.2deg) translateY(-20%);
     z-index: 2;
   }

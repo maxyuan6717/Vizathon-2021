@@ -33,6 +33,6 @@ export const theme = {
     padding: [150, 0, 150, 0],
   },
   section10: {
-    padding: [150, 150, 150, 150],
+    padding: [150, 150, 200, 150],
   },
 };

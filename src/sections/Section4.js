@@ -170,7 +170,7 @@ const Section4 = () => {
         <Spacer height={50} />
         <img
           src={src}
-          width={650}
+          width={750}
           alt="Discrimination"
           style={{ borderRadius: "12px" }}
         />
