@@ -1,13 +1,18 @@
 import React from "react";
 import { Background, Content, Spacer } from "../global_styles/Structure";
 
+import { BsChevronUp } from "react-icons/bs";
+
 import src from "../assets/stop.png";
 
 import * as Styles from "./Section10.styles";
 
+const Scroll = require("react-scroll");
+const scroll = Scroll.animateScroll;
+
 const Section10 = () => {
   return (
-    <Background color="pink">
+    <Background color="pink" style={{ position: "relative" }}>
       <Content section={10}>
         <Styles.DualityContainer>
           <Styles.DualityText>
@@ -44,6 +49,15 @@ const Section10 = () => {
           </Styles.ImageContainer>
         </Styles.DualityContainer>
       </Content>
+      <Styles.UpBtn
+        onClick={() =>
+          scroll.scrollToTop({
+            duration: 3000,
+          })
+        }
+      >
+        <BsChevronUp size={30} style={{ display: "block" }} />
+      </Styles.UpBtn>
     </Background>
   );
 };

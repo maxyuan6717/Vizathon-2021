@@ -1,6 +1,8 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./themes";
+import { Controller, Scene } from "react-scrollmagic";
+import { Tween, Timeline } from "react-gsap";
 
 import * as Styles from "./App.styles";
 
@@ -18,20 +20,82 @@ import Section10 from "./sections/Section10";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Styles.AppContainer>
-        <Section1 />
-        <Section2 />
-        <Section3 />
-        <Section4 />
-        <Section5 />
-        <Section6 />
-        <Section7 />
-        <Section8 />
-        <Section9 />
-        <Section10 />
-      </Styles.AppContainer>
+      <Styles.Container>
+        <Controller globalSceneOptions={{ triggerHook: "onLeave" }}>
+          <Scene offset={1100} pin>
+            <Styles.Panel>
+              <Section1 />
+              <Section2 />
+            </Styles.Panel>
+          </Scene>
+          <Scene duration="900%" pin>
+            <Timeline>
+              <Styles.AbsPanel>
+                <Section3 />
+              </Styles.AbsPanel>
+              <Tween from={{ x: "-100%" }} to={{ x: "0%" }}>
+                <Styles.AbsPanel>
+                  <Section4 />
+                </Styles.AbsPanel>
+              </Tween>
+              <Tween from={{ x: "100%" }} to={{ x: "0%" }}>
+                <Styles.AbsPanel>
+                  <Section5 />
+                </Styles.AbsPanel>
+              </Tween>
+              <Tween from={{ x: "-100%" }} to={{ x: "0%" }}>
+                <Styles.AbsPanel>
+                  <Section6 />
+                </Styles.AbsPanel>
+              </Tween>
+              <Tween from={{ x: "100%" }} to={{ x: "0%" }}>
+                <Styles.AbsPanel>
+                  <Section7 />
+                </Styles.AbsPanel>
+              </Tween>
+              <Tween from={{ x: "-100%" }} to={{ x: "0%" }}>
+                <Styles.AbsPanel>
+                  <Section8 />
+                </Styles.AbsPanel>
+              </Tween>
+              <Tween from={{ x: "100%" }} to={{ x: "0%" }}>
+                <Styles.AbsPanel />
+              </Tween>
+            </Timeline>
+          </Scene>
+          <Scene offset={400} pin>
+            <Styles.Panel first>
+              <Section9 />
+            </Styles.Panel>
+          </Scene>
+          <Scene pin>
+            <Styles.Panel first>
+              <Section10 />
+            </Styles.Panel>
+          </Scene>
+        </Controller>
+      </Styles.Container>
     </ThemeProvider>
   );
 }
+
+// function App() {
+//   return (
+//     <ThemeProvider theme={theme}>
+//       <Styles.AppContainer>
+//         <Section1 />
+//         <Section2 />
+//         <Section3 />
+//         <Section4 />
+//         <Section5 />
+//         <Section6 />
+//         <Section7 />
+//         <Section8 />
+//         <Section9 />
+//         <Section10 />
+//       </Styles.AppContainer>
+//     </ThemeProvider>
+//   );
+// }
 
 export default App;

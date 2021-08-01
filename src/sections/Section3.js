@@ -57,17 +57,6 @@ const Section3 = () => {
   return (
     <Background color="pink">
       <Content section={3}>
-        <div onClick={() => setCumulative(!cumulative)}>cumulative</div>
-        <div
-          onClick={() =>
-            setIncluded({ ...included, counterhate: !included.counterhate })
-          }
-        >
-          Counterhate
-        </div>
-        <div onClick={() => setIncluded({ ...included, hate: !included.hate })}>
-          Hate
-        </div>
         <Styles.GraphContainer>
           <ResponsiveLine
             data={[]

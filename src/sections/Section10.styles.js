@@ -6,20 +6,20 @@ export const DualityContainer = styled.div`
 `;
 
 export const DualityText = styled.div`
-  width: 600px;
+  width: 590px;
   position: relative;
   z-index: 69;
 `;
 
 export const SmallText = styled.div`
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 16px;
 `;
 
 export const ImageContainer = styled.div`
   position: absolute;
-  right: -25px;
+  right: -50px;
   top: 0;
 
   &:before {
@@ -38,4 +38,23 @@ export const ImageContainer = styled.div`
 
 export const Image = styled.img`
   transform: rotate(3.4deg) translateY(-20%);
+`;
+
+export const UpBtn = styled.div`
+  display: flex;
+  padding: 10px;
+  color: ${({ theme }) => theme.colors.orange};
+  border: 1px solid;
+  border-color: ${({ theme }) => theme.colors.orange};
+  position: absolute;
+  border-radius: 30px;
+  cursor: pointer;
+  bottom: 20px;
+  left: 20px;
+
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-20%);
+  }
 `;
