@@ -6,6 +6,7 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   min-width: ${WIDTH}px;
+  min-height: 100vh;
   background-image: url(${({ src }) => src});
   background-size: cover;
 

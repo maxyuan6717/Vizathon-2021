@@ -9,6 +9,7 @@ export const Background = styled.div`
   display: flex;
   background-color: ${({ theme, color }) => theme.colors[color]};
   min-width: ${WIDTH}px;
+  min-height: 100vh;
 `;
 
 export const Content = styled.div`

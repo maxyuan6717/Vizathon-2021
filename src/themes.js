@@ -21,12 +21,18 @@ export const theme = {
     padding: [150, 0, 150, 0],
   },
   section6: {
-    padding: [250, 0, 0, 0],
+    padding: [250, 0, 250, 0],
   },
   section7: {
     padding: [200, 0, 200, 0],
   },
   section8: {
     padding: [200, 0, 200, 0],
+  },
+  section9: {
+    padding: [150, 0, 150, 0],
+  },
+  section10: {
+    padding: [150, 150, 150, 150],
   },
 };
