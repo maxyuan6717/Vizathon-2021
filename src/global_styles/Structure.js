@@ -43,3 +43,22 @@ export const Tint = (color, opacity = 0.33) => `
   opacity: ${opacity};
 }
 `;
+
+export const Btn = styled.div`
+  font-size: 16px;
+  padding: 4px 8px;
+  background-color: ${({ selected }) => (selected ? "#c94284" : "")};
+  border-radius: 6px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 5px;
+
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #c9327b;
+  }
+`;

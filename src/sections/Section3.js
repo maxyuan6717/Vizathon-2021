@@ -1,6 +1,6 @@
 import { ResponsiveLine } from "@nivo/line";
 import React, { useState, useMemo } from "react";
-import { Background, Content } from "../global_styles/Structure";
+import { Background, Content, Btn } from "../global_styles/Structure";
 
 import { data } from "../jsons/Tweets_Time";
 // import { data } from "../jsons/Tweets_Jan_Aug";
@@ -144,31 +144,31 @@ const Section3 = () => {
               },
             }}
           />
-          <Styles.CumulativeToggle
-            pos={0}
-            selected
-            onClick={() => setCumulative(!cumulative)}
-          >
-            {cumulative ? "Cumulative" : "By Day"}
-          </Styles.CumulativeToggle>
-          <Styles.CumulativeToggle
-            pos={1}
-            selected={included.hate}
-            onClick={() => setIncluded({ ...included, hate: !included.hate })}
-          >
-            <Styles.LegendBall color={colors["Hate"]} />
-            Hate
-          </Styles.CumulativeToggle>
-          <Styles.CumulativeToggle
-            pos={2}
-            selected={included.counterhate}
-            onClick={() =>
-              setIncluded({ ...included, counterhate: !included.counterhate })
-            }
-          >
-            <Styles.LegendBall color={colors["Counterhate"]} />
-            Counterhate
-          </Styles.CumulativeToggle>
+          <Styles.BtnContainer pos={0}>
+            <Btn selected onClick={() => setCumulative(!cumulative)}>
+              {cumulative ? "Cumulative" : "By Day"}
+            </Btn>
+          </Styles.BtnContainer>
+          <Styles.BtnContainer pos={1}>
+            <Btn
+              selected={included.hate}
+              onClick={() => setIncluded({ ...included, hate: !included.hate })}
+            >
+              <Styles.LegendBall color={colors["Hate"]} />
+              Hate
+            </Btn>
+          </Styles.BtnContainer>
+          <Styles.BtnContainer pos={2}>
+            <Btn
+              selected={included.counterhate}
+              onClick={() =>
+                setIncluded({ ...included, counterhate: !included.counterhate })
+              }
+            >
+              <Styles.LegendBall color={colors["Counterhate"]} />
+              Counterhate
+            </Btn>
+          </Styles.BtnContainer>
           <Styles.Title>Title</Styles.Title>
         </Styles.GraphContainer>
       </Content>

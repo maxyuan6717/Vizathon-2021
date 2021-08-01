@@ -64,7 +64,7 @@ const population = {
   CA: 39.61,
   CO: 5.89,
   CT: 3.55,
-  DC2: 0.71,
+  DC2: 18.3,
   DE: 0.99,
   FL: 21.94,
   GA: 10.83,
