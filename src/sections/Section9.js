@@ -110,7 +110,7 @@ const Section9 = () => {
   return (
     <Background color="pink">
       <Content section={9}>
-        <LeftText width={650} weight={400} size={14} lineHeight={16.4}>
+        <LeftText width={650} weight={400} size={16} lineHeight={18}>
           In the aftermath of the Atlanta shooting, GoFundMe started a “Stop
           Asian Hate Community Hub.” Here, the #1 Fundraising Platform for
           Crowdsourcing organizes a list of 200+ verified fundraisers created by
@@ -309,7 +309,7 @@ const Section9 = () => {
           />
         </Styles.Graph>
         <Spacer height={50} />
-        <LeftText width={650} weight={400} size={14} lineHeight={16.4}>
+        <LeftText width={650} weight={400} size={16} lineHeight={18}>
           Some of these fundraisers exceeded their goals by astounding margins.
           Ordinary people were able to leverage their online platforms to offer
           material support to the Asian community and spread awareness of

@@ -12,9 +12,9 @@ export const DualityText = styled.div`
 `;
 
 export const SmallText = styled.div`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 18px;
 `;
 
 export const ImageContainer = styled.div`

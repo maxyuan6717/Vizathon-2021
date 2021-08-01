@@ -68,7 +68,7 @@ const Section3 = () => {
           <b>amplified & made more contagious by the Internet.</b>
         </CenteredText>
         <Spacer height={50} />
-        <LeftText width={650} weight={400} size={14} lineHeight={16.4}>
+        <LeftText width={650} weight={400} size={16} lineHeight={18}>
           In a May 2020 research paper, researchers from the Georgia Institute
           of Technology compiled 30 million tweets from Twitter, classifying
           each as hate, counterhate, neutral (neither hate nor counter-hate), or

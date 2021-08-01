@@ -107,7 +107,7 @@ const Section4 = () => {
   return (
     <Background color="pink">
       <Content section={4}>
-        <LeftText width={650} weight={400} size={14} lineHeight={16.4}>
+        <LeftText width={650} weight={400} size={16} lineHeight={18}>
           Interact with the map below to explore the amount of hate vs.
           counterhate by state in the U.S. over the course of four months, from
           January to April 2020.
@@ -159,7 +159,7 @@ const Section4 = () => {
           </Styles.OptionBar>
         </Styles.MapContainer>
         <Spacer height={50} />
-        <LeftText weight={400} size={14} lineHeight={16.4} width={650}>
+        <LeftText weight={400} size={16} lineHeight={18} width={650}>
           The pervasiveness of hate is especially troubling because hate online
           sets the stage for real-world violence. From March 2020 to 2021, the
           number of incidents of online discrimination reported to Stop AAPI
@@ -175,7 +175,7 @@ const Section4 = () => {
           style={{ borderRadius: "12px" }}
         />
         <Spacer height={50} />
-        <LeftText weight={400} size={14} lineHeight={16.4} width={650}>
+        <LeftText weight={400} size={16} lineHeight={18} width={650}>
           Given our understanding of the harms of tech, none of this is
           surprising.
           <Spacer height={15} />
