@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../themes";
 
-const WIDTH = 1152;
+export const WIDTH = 1152;
 
 export const Centered = `display: flex;justify-content: center;align-items: center;`;
 
@@ -35,7 +35,7 @@ export const Tint = (color, opacity = 0.33) => `
   content: "";
   position: absolute;
   top: 0;
-  bottom: 5px;
+  bottom: 0;
   left: 0;
   right: 0;
   background-color: ${theme.colors[color]};

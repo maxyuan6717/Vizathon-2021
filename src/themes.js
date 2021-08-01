@@ -26,4 +26,7 @@ export const theme = {
   section7: {
     padding: [200, 0, 200, 0],
   },
+  section8: {
+    padding: [200, 0, 200, 0],
+  },
 };
