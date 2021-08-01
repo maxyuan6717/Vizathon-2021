@@ -10,7 +10,7 @@ const Section5 = () => {
   return (
     <Background color="pink">
       <Content section={5}>
-        <CenteredText width={805} weight={700}>
+        <CenteredText width={880} weight={700}>
           Why? On social media, ideas are often spread, not on the basis of
           merit, but on the basis of emotional stimulation.
         </CenteredText>

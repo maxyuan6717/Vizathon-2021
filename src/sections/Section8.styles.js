@@ -11,5 +11,5 @@ export const Container = styled.div`
   background-position: center;
   background-size: cover;
 
-  ${Tint("black", 0.5)}
+  ${Tint("black", 0.7)}
 `;

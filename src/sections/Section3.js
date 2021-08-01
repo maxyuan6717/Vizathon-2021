@@ -61,7 +61,7 @@ const Section3 = () => {
   return (
     <Background color="pink">
       <Content section={3}>
-        <CenteredText width={805} weight={300} size={24}>
+        <CenteredText width={900} weight={300} size={32}>
           In this case, the agent of transmission is not droplet spread. It's
           existing forces of systemic oppression combined with feelings of fear,
           uncertainty, and vulnerability,{" "}

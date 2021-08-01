@@ -14,7 +14,7 @@ export const Percentage = styled.div`
 `;
 
 export const Details = styled.div`
-  font-weight: 700;
+  font-weight: 400;
   width: 512px;
   margin-left: 45px;
   font-size: 24px;
