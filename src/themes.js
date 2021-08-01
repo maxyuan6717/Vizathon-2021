@@ -3,6 +3,7 @@ export const theme = {
     pink: "#AC1960",
     orange: "#FFA800",
     graph: "#D18A00",
+    black: "#000",
   },
   section1: {
     padding: [150, 100, 50, 100],
@@ -14,6 +15,15 @@ export const theme = {
     padding: [150, 0, 150, 0],
   },
   section4: {
-    padding: [100, 0, 100, 0],
+    padding: [150, 0, 150, 0],
+  },
+  section5: {
+    padding: [150, 0, 150, 0],
+  },
+  section6: {
+    padding: [250, 0, 0, 0],
+  },
+  section7: {
+    padding: [200, 0, 200, 0],
   },
 };

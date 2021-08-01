@@ -28,7 +28,14 @@ const Section1 = () => {
           <HoverText
             primary="coronaracism"
             secondary={{
-              text: "Coronaracism describes the racial hatred directed toward certain groups of people fueled by the COVID-19 pandemic. It refers to the indiscriminate way that all people of East Asian appearance are being targeted right now.",
+              text: (
+                <span>
+                  Coronaracism describes the racial hatred directed toward
+                  certain groups of people fueled by the COVID-19 pandemic. It
+                  refers to the indiscriminate way that all people of East Asian
+                  appearance are being targeted right now.
+                </span>
+              ),
               width: 120,
               src: "Media Diversity Institute",
               href: "https://www.media-diversity.org/anti-asian-hate-and-coronaracism-grows-rapidly-on-social-media-and-beyond/",

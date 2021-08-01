@@ -5,9 +5,9 @@ import * as Styles from "./HoverText.styles";
 
 const HoverText = ({ primary, secondary }) => {
   return (
-    <Styles.Container>
+    <Styles.Container length={secondary.length}>
       {primary}
-      <Styles.SecondaryText width={secondary.width}>
+      <Styles.SecondaryText width={secondary.width} length={secondary.length}>
         {secondary.text}
         <Styles.SecondarySrc>
           <Source>

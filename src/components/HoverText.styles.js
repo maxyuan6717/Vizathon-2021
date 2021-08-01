@@ -19,7 +19,7 @@ export const Container = styled.span`
   }
 
   &:hover:before {
-    width: calc(100% + ${UNDERLINE_LENGTH}px);
+    width: calc(100% + ${({ length }) => length || UNDERLINE_LENGTH}px);
   }
 
   &:hover > div {
@@ -33,7 +33,7 @@ export const SecondaryText = styled.div`
   font-size: 10px;
   position: absolute;
   width: ${({ width }) => width}px;
-  right: calc(-${UNDERLINE_LENGTH}px);
+  right: calc(-${({ length }) => length || UNDERLINE_LENGTH}px);
   bottom: -10px;
   font-weight: 400;
   line-height: 12px;
