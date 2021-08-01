@@ -79,7 +79,11 @@ const Section3 = () => {
           <b>
             Looking just at the first two classifications—hate and
             counterhate—we see that hate tweets are, on average, four times more
-            frequent than counter-hate tweets.
+            frequent than counter-hate tweets. In fact, the GIT paper finds that
+            hate is more contagious than counterhate. After their first hate
+            tweet, hate users become more active and hateful than counterhate
+            users, making 2.26 hateful tweets on average vs. 1.32 counterhate
+            tweets for counterhate users.
           </b>
           <Spacer height={15} />
           And from March 16th to March 18th, 2020, the number of hate tweets
